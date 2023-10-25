@@ -9,3 +9,14 @@
 /Users/jakobhaulund/Library/CloudStorage/OneDrive-EFIF/Softwareprogrammering/Miniprojekt/Shared/obj/Debug/net6.0/refint/Shared.dll
 /Users/jakobhaulund/Library/CloudStorage/OneDrive-EFIF/Softwareprogrammering/Miniprojekt/Shared/obj/Debug/net6.0/Shared.pdb
 /Users/jakobhaulund/Library/CloudStorage/OneDrive-EFIF/Softwareprogrammering/Miniprojekt/Shared/obj/Debug/net6.0/ref/Shared.dll
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\bin\Debug\net6.0\Shared.deps.json
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\bin\Debug\net6.0\Shared.dll
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\bin\Debug\net6.0\Shared.pdb
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\obj\Debug\net6.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\obj\Debug\net6.0\Shared.AssemblyInfoInputs.cache
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\obj\Debug\net6.0\Shared.AssemblyInfo.cs
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\obj\Debug\net6.0\Shared.csproj.CoreCompileInputs.cache
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\obj\Debug\net6.0\Shared.dll
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\obj\Debug\net6.0\refint\Shared.dll
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\obj\Debug\net6.0\Shared.pdb
+C:\Users\Rasmus Dyrby Damgaar\OneDrive\Skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Shared\obj\Debug\net6.0\ref\Shared.dll

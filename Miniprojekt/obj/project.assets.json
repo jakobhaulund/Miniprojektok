@@ -1788,32 +1788,40 @@
     ]
   },
   "packageFolders": {
-    "/Users/jakobhaulund/.nuget/packages/": {}
+    "C:\\Users\\Rasmus Dyrby Damgaar\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jakobhaulund/Library/CloudStorage/OneDrive-EFIF/Softwareprogrammering/Miniprojekt/Miniprojekt/Miniprojekt.csproj",
+      "projectUniqueName": "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Miniprojekt\\Miniprojekt.csproj",
       "projectName": "Miniprojekt",
-      "projectPath": "/Users/jakobhaulund/Library/CloudStorage/OneDrive-EFIF/Softwareprogrammering/Miniprojekt/Miniprojekt/Miniprojekt.csproj",
-      "packagesPath": "/Users/jakobhaulund/.nuget/packages/",
-      "outputPath": "/Users/jakobhaulund/Library/CloudStorage/OneDrive-EFIF/Softwareprogrammering/Miniprojekt/Miniprojekt/obj/",
+      "projectPath": "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Miniprojekt\\Miniprojekt.csproj",
+      "packagesPath": "C:\\Users\\Rasmus Dyrby Damgaar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Miniprojekt\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/jakobhaulund/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Rasmus Dyrby Damgaar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/jakobhaulund/Library/CloudStorage/OneDrive-EFIF/Softwareprogrammering/Miniprojekt/Shared/Shared.csproj": {
-              "projectPath": "/Users/jakobhaulund/Library/CloudStorage/OneDrive-EFIF/Softwareprogrammering/Miniprojekt/Shared/Shared.csproj"
+            "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj"
             }
           }
         }
@@ -1852,7 +1860,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[6.0.21, 6.0.21]"
+            "version": "[6.0.22, 6.0.22]"
           }
         ],
         "frameworkReferences": {
@@ -1860,7 +1868,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
