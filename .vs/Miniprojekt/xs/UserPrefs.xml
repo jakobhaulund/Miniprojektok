@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{61975D05-7EAC-4604-BE24-B8F2FBF9CB5B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sharedok/Models/Board.cs">
+    <Files>
+      <File FileName="Miniprojekt/Program.cs" Line="1" Column="1" />
+      <File FileName="Miniprojekt/App.razor" Line="14" Column="1" />
+      <File FileName="Miniprojekt/_Imports.razor" Line="1" Column="1" />
+      <File FileName="Miniprojekt/wwwroot/index.html" Line="1" Column="1" />
+      <File FileName="Miniprojekt/Properties/launchSettings.json" Line="20" Column="7" />
+      <File FileName="Miniapi/Program.cs" Line="1" Column="1" />
+      <File FileName="Miniapi/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Miniapi/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="Miniprojekt/Pages/Index.razor" Line="1" Column="1" />
+      <File FileName="Miniprojekt/Pages/FetchData.razor" Line="1" Column="1" />
+      <File FileName="Miniprojekt/Pages/Counter.razor" Line="6" Column="1" />
+      <File FileName="Miniprojekt/Shared/MainLayout.razor" Line="1" Column="1" />
+      <File FileName="Miniprojekt/Shared/NavMenu.razor" Line="1" Column="1" />
+      <File FileName="Miniprojekt/Shared/SurveyPrompt.razor" Line="1" Column="1" />
+      <File FileName="Miniapi/WeatherForecast.cs" Line="2" Column="26" />
+      <File FileName="Sharedok/Component1.razor" Line="1" Column="1" />
+      <File FileName="Sharedok/ExampleJsInterop.cs" Line="1" Column="1" />
+      <File FileName="Sharedok/Models/Board.cs" Line="15" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Miniprojekt" expanded="True">
+            <Node name="Miniapi" expanded="True" />
+            <Node name="Miniprojekt" expanded="True">
+              <Node name="Shared" expanded="True" />
+            </Node>
+            <Node name="Shared">
+              <Node name="Models">
+                <Node name="Board.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Miniprojekt FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Shared FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

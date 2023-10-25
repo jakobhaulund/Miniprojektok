@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miniprojekt", "Miniprojekt\Miniprojekt.csproj", "{61975D05-7EAC-4604-BE24-B8F2FBF9CB5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miniapi", "Miniapi\Miniapi.csproj", "{0628BE91-0E02-46D6-9848-9F365D947A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{3B8FFA57-24B8-4810-9019-80CCB6528CB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61975D05-7EAC-4604-BE24-B8F2FBF9CB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61975D05-7EAC-4604-BE24-B8F2FBF9CB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61975D05-7EAC-4604-BE24-B8F2FBF9CB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61975D05-7EAC-4604-BE24-B8F2FBF9CB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0628BE91-0E02-46D6-9848-9F365D947A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0628BE91-0E02-46D6-9848-9F365D947A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0628BE91-0E02-46D6-9848-9F365D947A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0628BE91-0E02-46D6-9848-9F365D947A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8FFA57-24B8-4810-9019-80CCB6528CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8FFA57-24B8-4810-9019-80CCB6528CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8FFA57-24B8-4810-9019-80CCB6528CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8FFA57-24B8-4810-9019-80CCB6528CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7A64946-1E72-4F0A-9467-FF4083755145}
+	EndGlobalSection
+EndGlobal
