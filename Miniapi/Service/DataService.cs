@@ -92,23 +92,29 @@ namespace Service
 
         public string CreateComment(int postId, string commentContext, string user)
         {
-            var post = db.Post.FirstOrDefault(p => p.postId == postId);
-            if (post != null)
+            try
             {
-                Comment comment = new Comment { commentContext = commentContext, user = user };
-                post.comments.Add(comment);
+                var post = db.Post.FirstOrDefault(p => p.postId == postId);
+                if (post != null)
+                {
+                    Console.WriteLine("creating comment");
+                    Comment comment = new Comment { commentContext = commentContext, user = user };
+                    post.comments.Add(comment);
+                    Console.WriteLine(comment.commentContext);
+                    Console.WriteLine(comment.user);
 
-                db.SaveChanges();
+                    db.SaveChanges();
+                    Console.WriteLine("changes saved");
+                    return "kommentar oprettet  :D";
 
-                return "kommentar oprettet  :D";
 
+                }
+                else
+                {
+                    return "kunne ikke finde post :(";
 
-            }
-            else
-            {
-                return "kunne ikke finde post :(";
-            }
-
+                }
+            } catch (Exception ex) { Console.WriteLine(ex.Message); return ex.Message; }
 
         }
         public string ChangeVote(int postId, int vote) 

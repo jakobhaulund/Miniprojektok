@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj": {}
+    "C:\\Users\\Rasmus Dyrby Damgaar\\onedrive\\skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj": {
+    "C:\\Users\\Rasmus Dyrby Damgaar\\onedrive\\skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Rasmus Dyrby Damgaar\\onedrive\\skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Users\\Rasmus Dyrby Damgaar\\onedrive\\skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\Rasmus Dyrby Damgaar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rasmus Dyrby Damgaar\\OneDrive\\Skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Rasmus Dyrby Damgaar\\onedrive\\skrivebord\\3 semester\\Softwarearkitektur\\miniprojekt\\Miniprojektok\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

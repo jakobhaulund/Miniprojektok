@@ -11,7 +11,7 @@ namespace Data
 
         public DbSet<Post> Post => Set<Post>();
         
-        public DbSet<Comment> comments => Set<Comment>();
+        public DbSet<Comment> Comments => Set<Comment>();
 
         public BoardContext(DbContextOptions<BoardContext> options)
             : base(options)

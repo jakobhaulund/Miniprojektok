@@ -9,18 +9,14 @@ namespace Shared
     public class Post
 
     {
-        public Post()
-        {
-            new List<Comment>();
-        }
 
         public long postId { get; set; }
         public string title { get; set; }
         public string content { get; set; }
         public string user { get; set; }
-        public List<Comment>? comments {get; set;}
+        public List<Comment>? comments {get; set;} = new List<Comment>();
         public int vote { get; set; }
-
+         
 
     }
 }

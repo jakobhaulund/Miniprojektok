@@ -68,7 +68,8 @@ public class Program {
 
             app.MapPost("api/posts/{postId}/comments", (int postId, NewCommentata data, DataService service) =>
             {
-                return service.CreateComment(postId, data.Commentcontext, data.User);
+                string result = service.CreateComment(postId, data.Commentcontext, data.User);
+                return new {message = result};  
             });
             
             app.Run();
