@@ -56,9 +56,9 @@ public class Program {
                 return service.GetBoard(id);
             });
 
-            app.MapPost("/api/posts", (DataService service, NewPostData data) =>
+            app.MapPost("/api/boards/1/posts", (DataService service, NewPostData data) =>
             {
-                return service.CreatePost(data.title, data.user, data.Content, data.BoardId, data.comments);
+                return service.CreatePost(data.title, data.user, data.Content, data.comments);
             });
 
             app.MapPut("/api/posts/{postId}/votes", (int postId, NewPostData data, DataService service) =>
@@ -75,7 +75,7 @@ public class Program {
             app.Run();
 
         }
-        record NewPostData(string title, string user, int vote, string Content, int BoardId, List<Comment> comments);
+        record NewPostData(string title, string user, int vote, string Content, List<Comment> comments);
         record NewCommentata(int postId, string Commentcontext, string User);
 }
 }

@@ -64,30 +64,36 @@ namespace Service
 
 
         }
-
+        //Henter board
         public Board GetBoard(int id)
         {
             return db.Board.Include(b => b.Post).ThenInclude(p => p.comments).FirstOrDefault(b => b.BoardId == id);
         }
 
-        public string CreatePost(string title, string user, string content, int BoardId, List<Comment> comments)
+        public string CreatePost(string title, string user, string content, List<Comment> comments)
         {
-            Board board = db.Board.FirstOrDefault(b => b.BoardId == BoardId);
-            if (board != null)
+            try
             {
-                Post post = new Post { title = title, user = user, content = content, vote = 0, comments = new List<Comment>() };
-                board.Post.Add(post);
+                var board = db.Board.FirstOrDefault(b => b.BoardId == 1);
 
-                db.SaveChanges();
+                if (board != null)
+                {
+                    Post post = new Post { title = title, user = user, content = content, vote = 0, comments = new List<Comment>() };
+                    board.Post.Add(post);
 
-                return "Post oprettet";
+                    db.SaveChanges();
 
-            } else
+                    return "Post oprettet";
+
+                }
+                else
+                {
+                    return "Board kunne ikke findes :D";
+                }
+            } catch (Exception ex)
             {
-                return "Board kunne ikke findes :D";
+                return ex.Message;
             }
-
-
         }
 
         public string CreateComment(int postId, string commentContext, string user)
@@ -100,8 +106,6 @@ namespace Service
                     Console.WriteLine("creating comment");
                     Comment comment = new Comment { commentContext = commentContext, user = user };
                     post.comments.Add(comment);
-                    Console.WriteLine(comment.commentContext);
-                    Console.WriteLine(comment.user);
 
                     db.SaveChanges();
                     Console.WriteLine("changes saved");

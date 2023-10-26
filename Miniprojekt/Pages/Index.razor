@@ -6,305 +6,404 @@
 <PageTitle>Reddit</PageTitle>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-    }
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f4f4f4;
+		margin: 0;
+		padding: 0;
+	}
 
-    header {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-    }
+	header {
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		padding: 10px;
+	}
 
-    .post-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+	.post-container {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 20px;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
 
-    .post {
-        border: 1px solid #ddd;
-        margin: 10px 0;
-        padding: 10px;
-        background-color: #fff;
-        border-radius: 5px;
-    }
+	.post {
+		border: 1px solid #ddd;
+		margin: 10px 0;
+		padding: 10px;
+		background-color: #fff;
+		border-radius: 5px;
+	}
 
-        .post h3 {
-            color: #333;
-        }
+		.post h3 {
+			color: #333;
+		}
 
-        .post p {
-            color: #666;
-        }
+		.post p {
+			color: #666;
+		}
 
-    .comment {
-        margin-left: 20px;
-        border: 1px solid #eee;
-        padding: 5px;
-        background-color: #f9f9f9;
-    }
+	.comment {
+		margin-left: 20px;
+		border: 1px solid #eee;
+		padding: 5px;
+		background-color: #f9f9f9;
+	}
 
-        .comment p {
-            color: #444;
-        }
+		.comment p {
+			color: #444;
+		}
 
-    .comment-button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+	.comment-button {
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		padding: 5px 10px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
 
-    .add-comment-container {
-        display: none;
-    }
+	.add-comment-container {
+		display: none;
+	}
 
-        .add-comment-container input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+		.add-comment-container input[type="text"] {
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+		}
 
-    .add-comment-button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+	.add-comment-button {
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		padding: 5px 10px;
+		border-radius: 5px;
+		cursor: pointer;
+
+	}
+
+	.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.add-post-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-post-button:hover {
+    background-color: #0056b3;
+}
+
+
+	}
 </style>
 
 <header>
-    <h1>Not Reddit</h1>
+	<h1>Not Reddit</h1>
 </header>
 
 @if (board != null)
 {
-    <div class="post-container">
-        @foreach (var post in board.Post)
-        {
-            <div class="post">
-                <h3>@post.title</h3>
-                <p>@post.content</p>
-                <p>Posted by: @post.user</p>
-                <p>Votes: @post.vote</p>
-                <p><button class="vote" @onclick="() => Upvote(post.postId)">Upvote</button><button class="vote" @onclick="() => Downvote(post.postId)">Downvote</button></p>
-                <button class="comment-button" @onclick="() => ToggleComments(post)">Kommentarer</button>
-                <div class="add-comment-container" style="@(showComments.ContainsKey(post.postId) && showComments[post.postId] ? "display: block;" : "display: none;")">
-                    <h4>Comments</h4>
-                    <ul>
-                        @foreach (var comment in post.comments)
-                        {
-                            <li class="comment">@comment.user : @comment.commentContext</li>
-                        }
-                    </ul>
-                    <div>
-                        <input type="text" @bind="newCommentUser" placeholder="Username">
-                        <input type="text" @bind="newCommentText" placeholder="Write a comment">
-                        <button class="add-comment-button" @onclick="() => AddComment(post.postId)">Add Comment</button>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
+	   <div class="post-container">
+		<h3>Create Post</h3>
+		<div class="input-container">
+			<div class="input-group">
+				<label for="username">Username:</label>
+				<input type="text" id="username" @bind="User" class="input-field">
+			</div>
+			<div class="input-group">
+				<label for="title">Title:</label>
+				<input type="text" id="title" @bind="Title" class="input-field">
+			</div>
+			<div class="input-group">
+				<label for="content">Content:</label>
+				<input type="text" id="content" @bind="Content" class="input-field">
+			</div>
+			<button class="add-post-button" @onclick="() => AddPost()">Create Post</button>
+		</div>
+
+	</div>
+	<div class="post-container">
+		@foreach (var post in board.Post)
+		{
+			<div class="post">
+				<p>@post.title</p>
+				<p>@post.content</p>
+				<p>Posted by: @post.user</p>
+				<p>Votes: @post.vote</p>
+				<p><button class="vote" @onclick="() => Upvote(post.postId)">Upvote</button><button class="vote" @onclick="() => Downvote(post.postId)">Downvote</button></p>
+				<button class="comment-button" @onclick="() => ToggleComments(post)">Kommentarer</button>
+				<div class="add-comment-container" style="@(showComments.ContainsKey(post.postId) && showComments[post.postId] ? "display: block;" : "display: none;")">
+					<h4>Comments</h4>
+					<ul>
+						@foreach (var comment in post.comments)
+						{
+							<li class="comment">@comment.user : @comment.commentContext</li>
+						}
+					</ul>
+					<div>
+						<input type="text" @bind="newCommentUser" placeholder="Username">
+						<input type="text" @bind="newCommentText" placeholder="Write a comment">
+						<button class="add-comment-button" @onclick="() => AddComment(post.postId)">Add Comment</button>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
 }
 else
 {
-    <p>Unable to find the board.</p>
+	<p>Unable to find the board.</p>
 }
 
 
 
 
 @code {
-    private Board? board;
-    private string newCommentUser = "";
-    private string newCommentText = "";
-    private int vote = 0;
+	private Board? board;
+	private string User = "";
+	private string Content = "";
+	private string Title = "";
+	private string newCommentUser = "";
+	private string newCommentText = "";
+	private int vote = 0;
 
-    protected override async Task OnInitializedAsync()
-    {
-        try
-        {
-            using var httpClient = new HttpClient();
+	protected override async Task OnInitializedAsync()
+	{
+		try
+		{
+			using var httpClient = new HttpClient();
 
-            httpClient.BaseAddress = new Uri("http://localhost:5050");
+			httpClient.BaseAddress = new Uri("http://localhost:5050");
 
-            // Get-anmodning til at hente board
-            var response = await httpClient.GetAsync("api/boards/1");
+			// Get-anmodning til at hente board
+			var response = await httpClient.GetAsync("api/boards/1");
 
-            if (response.IsSuccessStatusCode)
-            {
-                // Læs svaret som en streng
-                var responseContent = await response.Content.ReadAsStringAsync();
+			if (response.IsSuccessStatusCode)
+			{
+				// Læs svaret som en streng
+				var responseContent = await response.Content.ReadAsStringAsync();
 
-                board = JsonSerializer.Deserialize<Board>(responseContent, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                Console.WriteLine((int)response.StatusCode);
-            }
-        }
-        catch (Exception ex)
-        {
+				board = JsonSerializer.Deserialize<Board>(responseContent, new JsonSerializerOptions
+					{
+						PropertyNameCaseInsensitive = true
+					});
+			}
+			else
+			{
+				Console.WriteLine((int)response.StatusCode);
+			}
+		}
+		catch (Exception ex)
+		{
 
-            Console.WriteLine(ex.Message);
-        }
-    }
+			Console.WriteLine(ex.Message);
+		}
+	}
 
-    private async Task AddComment(long postId)
-    {
-        try
-        {
-            using var httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri("http://localhost:5050");
+	private async Task AddPost()
+	{
+		try
+		{
+			using var httplClient = new HttpClient();
+			httplClient.BaseAddress = new Uri("http://localhost:5050");
 
-            var newCommentData = new
-            {
-                commentContext = newCommentText,
-                User = newCommentUser
-            };
+			var newPostData = new
+			{
+				user = User,
+				title = Title,
+				content = Content
+			};
 
-            var json = JsonSerializer.Serialize(newCommentData);
-            var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+			var json = JsonSerializer.Serialize(newPostData);
+			var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-            var response = await httpClient.PostAsync($"api/posts/{postId}/comments", content);
+			var response = await httplClient.PostAsync($"/api/boards/1/posts", content);
 
-            if (response.IsSuccessStatusCode)
-            {
-                await RefreshBoardData();
-            }
-            else
-            {
-                Console.WriteLine(response.StatusCode);
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-    }
+			if (response.IsSuccessStatusCode)
+			{
+				await RefreshBoardData();
+			}
+			else
+			{
+				Console.WriteLine(response.StatusCode);
+			}
+		}
+		catch (Exception ex)
+		{
+			Console.WriteLine(ex.Message);
+		}
+	}
 
-    private async Task RefreshBoardData()
-    {
-        try
-        {
-            using var httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri("http://localhost:5050");
+	private async Task AddComment(long postId)
+	{
+		try
+		{
+			using var httpClient = new HttpClient();
+			httpClient.BaseAddress = new Uri("http://localhost:5050");
 
-            var response = await httpClient.GetAsync("api/boards/1");
+			var newCommentData = new
+			{
+				commentContext = newCommentText,
+				User = newCommentUser
+			};
 
-            if (response.IsSuccessStatusCode)
-            {
-                var responseContent = await response.Content.ReadAsStringAsync();
+			var json = JsonSerializer.Serialize(newCommentData);
+			var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-                board = JsonSerializer.Deserialize<Board>(responseContent, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                Console.WriteLine((int)response.StatusCode);
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-    }
+			var response = await httpClient.PostAsync($"api/posts/{postId}/comments", content);
 
-    private Dictionary<long, bool> showComments = new Dictionary<long, bool>();
+			if (response.IsSuccessStatusCode)
+			{
+				await RefreshBoardData();
+			}
+			else
+			{
+				Console.WriteLine(response.StatusCode);
+			}
+		}
+		catch (Exception ex)
+		{
+			Console.WriteLine(ex.Message);
+		}
+	}
 
-    private async Task Upvote(long postId)
-    {
-        try
-        {
-            using var HttpClient = new HttpClient();
-            HttpClient.BaseAddress = new Uri("http://localhost:5050");
+	private async Task RefreshBoardData()
+	{
+		try
+		{
+			using var httpClient = new HttpClient();
+			httpClient.BaseAddress = new Uri("http://localhost:5050");
 
-            var newVoteData = new
-            {
-                vote = 1
-            };
+			var response = await httpClient.GetAsync("api/boards/1");
 
-            var json = JsonSerializer.Serialize(newVoteData);
+			if (response.IsSuccessStatusCode)
+			{
+				var responseContent = await response.Content.ReadAsStringAsync();
 
-            var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+				board = JsonSerializer.Deserialize<Board>(responseContent, new JsonSerializerOptions
+					{
+						PropertyNameCaseInsensitive = true
+					});
+			}
+			else
+			{
+				Console.WriteLine((int)response.StatusCode);
+			}
+		}
+		catch (Exception ex)
+		{
+			Console.WriteLine(ex.Message);
+		}
+	}
 
-            var response = await HttpClient.PutAsync($"/api/posts/{postId}/votes", content);
-            if (response.IsSuccessStatusCode)
-            {
-                await RefreshBoardData();
-            }
-            else
-            {
-                Console.WriteLine(response.StatusCode);
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-    }
+	private Dictionary<long, bool> showComments = new Dictionary<long, bool>();
 
-    private async Task Downvote(long postId)
-    {
-        try
-        {
-            using var HttpClient = new HttpClient();
-            HttpClient.BaseAddress = new Uri("http://localhost:5050");
+	private async Task Upvote(long postId)
+	{
+		try
+		{
+			using var HttpClient = new HttpClient();
+			HttpClient.BaseAddress = new Uri("http://localhost:5050");
 
-            var newVoteData = new
-            {
-                vote = -1
-            };
+			var newVoteData = new
+			{
+				vote = 1
+			};
 
-            var json = JsonSerializer.Serialize(newVoteData);
+			var json = JsonSerializer.Serialize(newVoteData);
 
-            var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+			var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-            var response = await HttpClient.PutAsync($"/api/posts/{postId}/votes", content);
-            if (response.IsSuccessStatusCode)
-            {
-                await RefreshBoardData();
-            }
-            else
-            {
-                Console.WriteLine(response.StatusCode);
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-    }
+			var response = await HttpClient.PutAsync($"/api/posts/{postId}/votes", content);
+			if (response.IsSuccessStatusCode)
+			{
+				await RefreshBoardData();
+			}
+			else
+			{
+				Console.WriteLine(response.StatusCode);
+			}
+		}
+		catch (Exception ex)
+		{
+			Console.WriteLine(ex.Message);
+		}
+	}
 
-    private void ToggleComments(Post post)
-    {
-        if (showComments.ContainsKey(post.postId))
-        {
-            showComments[post.postId] = !showComments[post.postId];
-        }
-        else
-        {
-            showComments[post.postId] = true;
-        }
-    }
+	private async Task Downvote(long postId)
+	{
+		try
+		{
+			using var HttpClient = new HttpClient();
+			HttpClient.BaseAddress = new Uri("http://localhost:5050");
+
+			var newVoteData = new
+			{
+				vote = -1
+			};
+
+			var json = JsonSerializer.Serialize(newVoteData);
+
+			var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+
+			var response = await HttpClient.PutAsync($"/api/posts/{postId}/votes", content);
+			if (response.IsSuccessStatusCode)
+			{
+				await RefreshBoardData();
+			}
+			else
+			{
+				Console.WriteLine(response.StatusCode);
+			}
+		}
+		catch (Exception ex)
+		{
+			Console.WriteLine(ex.Message);
+		}
+	}
+
+	private void ToggleComments(Post post)
+	{
+		if (showComments.ContainsKey(post.postId))
+		{
+			showComments[post.postId] = !showComments[post.postId];
+		}
+		else
+		{
+			showComments[post.postId] = true;
+		}
+	}
 }

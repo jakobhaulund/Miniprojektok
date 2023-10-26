@@ -9,33 +9,29 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = Miniprojekt
 build_property.RootNamespace = Miniprojekt
-build_property.ProjectDir = C:\Users\Rasmus Dyrby Damgaar\onedrive\skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Miniprojekt\
+build_property.ProjectDir = C:\Users\jakob\OneDrive\Skrivebord\Miniprojektok\Miniprojekt\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Rasmus Dyrby Damgaar\onedrive\skrivebord\3 semester\Softwarearkitektur\miniprojekt\Miniprojektok\Miniprojekt
+build_property.MSBuildProjectDirectory = C:\Users\jakob\OneDrive\Skrivebord\Miniprojektok\Miniprojekt
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Rasmus Dyrby Damgaar/onedrive/skrivebord/3 semester/Softwarearkitektur/miniprojekt/Miniprojektok/Miniprojekt/App.razor]
+[C:/Users/jakob/OneDrive/Skrivebord/Miniprojektok/Miniprojekt/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rasmus Dyrby Damgaar/onedrive/skrivebord/3 semester/Softwarearkitektur/miniprojekt/Miniprojektok/Miniprojekt/Pages/Index.razor]
+[C:/Users/jakob/OneDrive/Skrivebord/Miniprojektok/Miniprojekt/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rasmus Dyrby Damgaar/onedrive/skrivebord/3 semester/Softwarearkitektur/miniprojekt/Miniprojektok/Miniprojekt/Shared/SurveyPrompt.razor]
+[C:/Users/jakob/OneDrive/Skrivebord/Miniprojektok/Miniprojekt/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rasmus Dyrby Damgaar/onedrive/skrivebord/3 semester/Softwarearkitektur/miniprojekt/Miniprojektok/Miniprojekt/_Imports.razor]
+[C:/Users/jakob/OneDrive/Skrivebord/Miniprojektok/Miniprojekt/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rasmus Dyrby Damgaar/onedrive/skrivebord/3 semester/Softwarearkitektur/miniprojekt/Miniprojektok/Miniprojekt/Shared/MainLayout.razor]
+[C:/Users/jakob/OneDrive/Skrivebord/Miniprojektok/Miniprojekt/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-t7huw41i5p
-
-[C:/Users/Rasmus Dyrby Damgaar/onedrive/skrivebord/3 semester/Softwarearkitektur/miniprojekt/Miniprojektok/Miniprojekt/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-7ypjioa31b
